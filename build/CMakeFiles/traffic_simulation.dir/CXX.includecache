@@ -6,37 +6,13 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Albert/Documents/C++/Portfolio/L3_Project/src/Intersection.cpp
+C:/Users/Albert/Documents/C++/Portfolio/L3_Project/src/TrafficObject.cpp
 iostream
--
-thread
 -
 chrono
 -
-future
+algorithm
 -
-random
--
-Street.h
-C:/Users/Albert/Documents/C++/Portfolio/L3_Project/src/Street.h
-Intersection.h
-C:/Users/Albert/Documents/C++/Portfolio/L3_Project/src/Intersection.h
-Vehicle.h
-C:/Users/Albert/Documents/C++/Portfolio/L3_Project/src/Vehicle.h
-
-C:/Users/Albert/Documents/C++/Portfolio/L3_Project/src/Intersection.h
-vector
--
-future
--
-mutex
--
-memory
--
-TrafficObject.h
-C:/Users/Albert/Documents/C++/Portfolio/L3_Project/src/TrafficObject.h
-
-C:/Users/Albert/Documents/C++/Portfolio/L3_Project/src/Street.h
 TrafficObject.h
 C:/Users/Albert/Documents/C++/Portfolio/L3_Project/src/TrafficObject.h
 
@@ -47,8 +23,4 @@ thread
 -
 mutex
 -
-
-C:/Users/Albert/Documents/C++/Portfolio/L3_Project/src/Vehicle.h
-TrafficObject.h
-C:/Users/Albert/Documents/C++/Portfolio/L3_Project/src/TrafficObject.h
 
