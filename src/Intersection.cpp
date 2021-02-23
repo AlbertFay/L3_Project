@@ -12,6 +12,7 @@
 
 // L3.1 : Safeguard all accesses to the private members _vehicles and _promises with an appropriate locking mechanism, 
 // that will not cause a deadlock situation where access to the resources is accidentally blocked.
+std::mutex mtx;
 
 int WaitingVehicles::getSize()
 {
@@ -20,12 +21,15 @@ int WaitingVehicles::getSize()
 
 void WaitingVehicles::pushBack(std::shared_ptr<Vehicle> vehicle, std::promise<void> &&promise)
 {
+    mtx.lock();
     _vehicles.push_back(vehicle);
     _promises.push_back(std::move(promise));
+    mtx.unlock();
 }
 
 void WaitingVehicles::permitEntryToFirstInQueue()
 {
+    mtx.lock();
     // get entries from the front of both queues
     auto firstPromise = _promises.begin();
     auto firstVehicle = _vehicles.begin();
@@ -36,6 +40,7 @@ void WaitingVehicles::permitEntryToFirstInQueue()
     // remove front elements from both queues
     _vehicles.erase(firstVehicle);
     _promises.erase(firstPromise);
+    mtx.unlock();
 }
 
 /* Implementation of class "Intersection" */
